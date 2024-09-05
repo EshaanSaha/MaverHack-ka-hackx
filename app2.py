@@ -48,19 +48,19 @@ def main():
     st.header("Enter the EEG values:")
 
     # Input fields for each brain region with max value of 5500
-    AF3 = st.number_input("AF3 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    AF4 = st.number_input("AF4 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    F7 = st.number_input("F7 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    F3 = st.number_input("F3 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    FC5 = st.number_input("FC5 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    FC6 = st.number_input("FC6 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    F4 = st.number_input("F4 (Frontal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    T7 = st.number_input("T7 (Temporal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    T8 = st.number_input("T8 (Temporal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    P7 = st.number_input("P7 (Parietal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    P8 = st.number_input("P8 (Parietal Region)", min_value=0, max_value=5500, value=2750, step=1)
-    O1 = st.number_input("O1 (Occipital Region)", min_value=0, max_value=5500, value=2750, step=1)
-    O2 = st.number_input("O2 (Occipital Region)", min_value=0, max_value=5500, value=2750, step=1)
+    AF3 = st.number_input("AF3 (Frontal Region)", min_value=0, max_value=5500, value=4450, step=1)
+    AF4 = st.number_input("AF4 (Frontal Region)", min_value=0, max_value=5500, value=4450, step=1)
+    F7 = st.number_input("F7 (Frontal Region)", min_value=0, max_value=5500, value=4350, step=1)
+    F3 = st.number_input("F3 (Frontal Region)", min_value=0, max_value=5500, value=4350, step=1)
+    FC5 = st.number_input("FC5 (Frontal Region)", min_value=0, max_value=5500, value=4150, step=1)
+    FC6 = st.number_input("FC6 (Frontal Region)", min_value=0, max_value=5500, value=4150, step=1)
+    F4 = st.number_input("F4 (Frontal Region)", min_value=0, max_value=5500, value=4350, step=1)
+    T7 = st.number_input("T7 (Temporal Region)", min_value=0, max_value=5500, value=4225, step=1)
+    T8 = st.number_input("T8 (Temporal Region)", min_value=0, max_value=5500, value=4225, step=1)
+    P7 = st.number_input("P7 (Parietal Region)", min_value=0, max_value=5500, value=4252, step=1)
+    P8 = st.number_input("P8 (Parietal Region)", min_value=0, max_value=5500, value=4250, step=1)
+    O1 = st.number_input("O1 (Occipital Region)", min_value=0, max_value=5500, value=4210, step=1)
+    O2 = st.number_input("O2 (Occipital Region)", min_value=0, max_value=5500, value=4210, step=1)
 
     # Store inputs in a dictionary
     input_values = {
