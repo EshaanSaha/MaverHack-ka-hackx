@@ -49,7 +49,10 @@ def main():
     # Collect readings for 3 samples
     for i in range(3):
         st.subheader(f"Sample {i + 1}")
-        sample_readings = [st.number_input(f"Reading for {electrode}:", min_value=0.0, max_value=5000.0, value=0.0) for electrode in electrodes]
+        sample_readings = [
+            st.number_input(f"Reading for {electrode}:", min_value=0.0, max_value=5000.0, value=0.0, key=f"sample_{i}_{electrode}")
+            for electrode in electrodes
+        ]
         eeg_readings.append(sample_readings)
 
     # Display the inputs
@@ -67,11 +70,11 @@ def main():
 
     # Input fields for ML prediction
     st.header("Enter Features for ML Prediction:")
-    feature_1 = st.number_input("Enter the average value of frontal region:", min_value=0.0, max_value=5000.0, value=10.0)
-    feature_2 = st.number_input("Enter the average value of occipital region:", min_value=0.0, max_value=5000.0, value=20.0)
-    feature_3 = st.number_input("Enter the average value of parietal region:", min_value=0.0, max_value=5000.0, value=30.0)
-    feature_4 = st.number_input("Enter the average value of front central region:", min_value=0.0, max_value=5000.0, value=40.0)
-    feature_5 = st.number_input("Enter the average value of temporal region:", min_value=0.0, max_value=5000.0, value=50.0)
+    feature_1 = st.number_input("Enter the average value of frontal region:", min_value=0.0, max_value=5000.0, value=10.0, key="feature_1")
+    feature_2 = st.number_input("Enter the average value of occipital region:", min_value=0.0, max_value=5000.0, value=20.0, key="feature_2")
+    feature_3 = st.number_input("Enter the average value of parietal region:", min_value=0.0, max_value=5000.0, value=30.0, key="feature_3")
+    feature_4 = st.number_input("Enter the average value of front central region:", min_value=0.0, max_value=5000.0, value=40.0, key="feature_4")
+    feature_5 = st.number_input("Enter the average value of temporal region:", min_value=0.0, max_value=5000.0, value=50.0, key="feature_5")
     
     input_features = [feature_1, feature_2, feature_3, feature_4, feature_5]
     
